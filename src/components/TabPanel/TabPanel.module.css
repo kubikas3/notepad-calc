@@ -1,0 +1,27 @@
+.root {
+  width: 100%;
+  height: 100%;
+}
+
+.textField,
+.textFieldInputWrapper,
+.textFieldInput {
+  height: 100% !important;
+}
+
+.textField {
+  width: 50%;
+}
+
+.textFieldInput {
+  overflow: auto !important;
+  white-space: pre;
+}
+
+.inputFieldWrapper {
+  border-radius: 4px 0 0 4px;
+}
+
+.outputFieldWrapper {
+  border-radius: 0 4px 4px 0;
+}

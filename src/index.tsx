@@ -1,14 +1,28 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import "./index.css";
+import { App } from "./components/App/App";
+import reportWebVitals from "./reportWebVitals";
+import { NoteDataProvider } from "./contexts/NoteData/NoteDataProvider";
+import { Note } from "./@types/Note";
+import { CssBaseline, StyledEngineProvider } from "@mui/material";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+const initialNotes: Note[] = [{ id: 0, name: "Be pavadinimo 1", content: "" }];
+const root = createRoot(document.getElementById("root") as HTMLElement);
+
+root.render(
+  <StrictMode>
+    <StyledEngineProvider injectFirst>
+      <CssBaseline />
+      <NoteDataProvider
+        storageKey="notes"
+        initialIndex={0}
+        initialNotes={initialNotes}
+      >
+        <App />
+      </NoteDataProvider>
+    </StyledEngineProvider>
+  </StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

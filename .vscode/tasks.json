@@ -1,0 +1,25 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "tcm",
+      "detail": "Runs typed-css-modules watch",
+      "type": "shell",
+      "command": "tcm",
+      "args": ["src", "-w"],
+      "isBackground": true,
+      "promptOnClose": true,
+      "icon": {
+        "id": "symbol-customcolor"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new",
+        "echo": false
+      },
+      "runOptions": { "runOn": "folderOpen" }
+    }
+  ]
+}
