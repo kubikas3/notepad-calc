@@ -82,10 +82,6 @@ export const TabPanel: FC<TabPanelProps> = ({ index, value }) => {
     if (expression.length) {
       const answer = math.current.evaluate(expression, scope);
 
-      if (expression.includes("=")) {
-        return `${expression} (${answer}) ${comment ?? ""}`;
-      }
-
       return `${expression} = ${answer} ${comment ?? ""}`;
     }
 
