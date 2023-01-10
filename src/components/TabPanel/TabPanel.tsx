@@ -77,8 +77,16 @@ export const TabPanel: FC<TabPanelProps> = ({ index, value }) => {
 
   const mapLine = (line: string) => {
     const trimmedLine = line.trim();
-    if (trimmedLine.length && !trimmedLine.startsWith("//")) {
-      return `${trimmedLine} = ${math.current.evaluate(trimmedLine, scope)}`;
+    const [expression, comment] = line.split("'").map((str) => str.trim());
+
+    if (expression.length) {
+      const answer = math.current.evaluate(expression, scope);
+
+      if (expression.includes("=")) {
+        return `${expression} (${answer}) ${comment ?? ""}`;
+      }
+
+      return `${expression} = ${answer} ${comment ?? ""}`;
     }
 
     return trimmedLine;
