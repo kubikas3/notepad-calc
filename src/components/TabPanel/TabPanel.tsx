@@ -105,6 +105,7 @@ export const TabPanel: FC<TabPanelProps> = ({ index, value }) => {
         autoCapitalize="off"
         autoComplete="off"
         autoCorrect="off"
+        spellCheck={false}
         className={styles.textField}
         label="Skaičiavimai"
         variant="outlined"
