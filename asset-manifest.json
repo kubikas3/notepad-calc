@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/notepad-calc/static/css/main.cdd8fcc0.css",
-    "main.js": "/notepad-calc/static/js/main.c5edf19b.js",
+    "main.css": "/notepad-calc/static/css/main.e75a7734.css",
+    "main.js": "/notepad-calc/static/js/main.1f712b15.js",
     "static/js/787.1609b1cf.chunk.js": "/notepad-calc/static/js/787.1609b1cf.chunk.js",
     "index.html": "/notepad-calc/index.html",
-    "main.cdd8fcc0.css.map": "/notepad-calc/static/css/main.cdd8fcc0.css.map",
-    "main.c5edf19b.js.map": "/notepad-calc/static/js/main.c5edf19b.js.map",
+    "main.e75a7734.css.map": "/notepad-calc/static/css/main.e75a7734.css.map",
+    "main.1f712b15.js.map": "/notepad-calc/static/js/main.1f712b15.js.map",
     "787.1609b1cf.chunk.js.map": "/notepad-calc/static/js/787.1609b1cf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cdd8fcc0.css",
-    "static/js/main.c5edf19b.js"
+    "static/css/main.e75a7734.css",
+    "static/js/main.1f712b15.js"
   ]
 }
