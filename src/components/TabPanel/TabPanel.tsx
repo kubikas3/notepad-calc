@@ -1,5 +1,5 @@
 import { TextField } from "@mui/material";
-import { ChangeEvent, FC, UIEvent, useEffect, useRef } from "react";
+import { ChangeEvent, FC, UIEvent, useRef } from "react";
 import { useNoteData } from "../../hooks/useNoteData";
 import { BigMath } from "../../services/BigMath";
 
@@ -34,13 +34,6 @@ export const TabPanel: FC<TabPanelProps> = ({ index, value }) => {
   const inputFieldRef = useRef<HTMLTextAreaElement | null>(null);
   const outputFieldRef = useRef<HTMLTextAreaElement | null>(null);
   const scope = {};
-  const visible = value === index;
-
-  useEffect(() => {
-    if (visible && inputFieldRef.current) {
-      inputFieldRef.current.focus();
-    }
-  }, [index, value, visible]);
 
   const handleChange = ({ target }: ChangeEvent<HTMLTextAreaElement>) => {
     setNotes((prevState) =>
@@ -96,6 +89,7 @@ export const TabPanel: FC<TabPanelProps> = ({ index, value }) => {
   };
 
   const answers = note.content.split(LINE_BREAK_REGEX).map(mapLine).join("\n");
+  const visible = value === index;
 
   return (
     <div
