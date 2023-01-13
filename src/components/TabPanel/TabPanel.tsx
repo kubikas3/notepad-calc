@@ -100,51 +100,47 @@ export const TabPanel: FC<TabPanelProps> = ({ index, value }) => {
       id={`tabpanel-${index}`}
       aria-labelledby={`tab-${index}`}
     >
-      {visible && (
-        <>
-          <TextField
-            autoFocus
-            multiline
-            autoCapitalize="off"
-            autoComplete="off"
-            autoCorrect="off"
-            className={styles.textField}
-            label="Skaičiavimas"
-            variant="outlined"
-            placeholder="x = 5..."
-            value={note.content}
-            onChange={handleChange}
-            inputRef={inputFieldRef}
-            InputProps={{
-              className: `${styles.textFieldInputWrapper} ${styles.inputFieldWrapper}`,
-            }}
-            inputProps={{
-              className: styles.textFieldInput,
-              onScroll: handleInputScroll,
-            }}
-          />
-          <TextField
-            multiline
-            autoCapitalize="off"
-            autoComplete="off"
-            autoCorrect="off"
-            spellCheck={false}
-            className={styles.textField}
-            label="Atsakymai"
-            variant="outlined"
-            value={answers}
-            inputRef={outputFieldRef}
-            InputProps={{
-              className: `${styles.textFieldInputWrapper} ${styles.outputFieldWrapper}`,
-            }}
-            inputProps={{
-              className: styles.textFieldInput,
-              onScroll: handleOutputScroll,
-              readOnly: true,
-            }}
-          />
-        </>
-      )}
+      <TextField
+        autoFocus
+        multiline
+        autoCapitalize="off"
+        autoComplete="off"
+        autoCorrect="off"
+        className={styles.textField}
+        label="Skaičiavimas"
+        variant="outlined"
+        placeholder="x = 5..."
+        value={note.content}
+        onChange={handleChange}
+        inputRef={inputFieldRef}
+        InputProps={{
+          className: `${styles.textFieldInputWrapper} ${styles.inputFieldWrapper}`,
+        }}
+        inputProps={{
+          className: styles.textFieldInput,
+          onScroll: handleInputScroll,
+        }}
+      />
+      <TextField
+        multiline
+        autoCapitalize="off"
+        autoComplete="off"
+        autoCorrect="off"
+        spellCheck={false}
+        className={styles.textField}
+        label="Atsakymai"
+        variant="outlined"
+        value={answers}
+        inputRef={outputFieldRef}
+        InputProps={{
+          className: `${styles.textFieldInputWrapper} ${styles.outputFieldWrapper}`,
+        }}
+        inputProps={{
+          className: styles.textFieldInput,
+          onScroll: handleOutputScroll,
+          readOnly: true,
+        }}
+      />
     </div>
   );
 };

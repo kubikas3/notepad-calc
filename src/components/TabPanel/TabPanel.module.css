@@ -16,10 +16,12 @@
 .textFieldInput {
   overflow: auto !important;
   white-space: pre;
+  padding-left: 14px;
 }
 
 .inputFieldWrapper {
   border-radius: 4px 0 0 4px;
+  padding: 16.5px 14px 16.5px 0;
 }
 
 .outputFieldWrapper {
